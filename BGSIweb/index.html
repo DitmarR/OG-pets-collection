@@ -84,7 +84,7 @@
 
     <script>
       // =====================================================
-      // PET LIST
+      // OG PETS LIST
       // =====================================================
       const pets = [
         { name: "OG Dementor", image: "og_dementor.png", owned: true },
@@ -97,7 +97,7 @@
         {
           name: "OG New Year's Champion",
           image: "og_new_years_champion.png",
-          owned: false,
+          owned: true,
         },
         {
           name: "OG Lucky Pyramidium",
@@ -105,11 +105,11 @@
           owned: false,
         },
 
-        { name: "OG Godly Gem", image: "og_godly_gem.png", owned: false },
+        { name: "OG Godly Gem", image: "og_godly_gem.png", owned: true },
         {
           name: "OG Sinister Lord",
           image: "og_sinister_lord.png",
-          owned: false,
+          owned: true,
         },
         {
           name: "OG Frost Sentinel",
@@ -145,7 +145,7 @@
         },
 
         { name: "OG Demoncore", image: "og_demoncore.png", owned: true },
-        { name: "OG Love Thief", image: "og_love_thief.png", owned: false },
+        { name: "OG Love Thief", image: "og_love_thief.png", owned: true },
 
         {
           name: "OG Cardinal Bunny",
@@ -240,11 +240,21 @@
         },
 
         { name: "OG The Overlord", image: "og_the_overlord.png", owned: true },
+
+        { name: "OG Easter Spirit", image: "og_easter_spirit.png", owned: true },
+        { name: "OG Sinister Skull", image: "og_sinister_skull.png", owned: false },
+        { name: "OG Angelic Skull", image: "og_angelic_skull.png", owned: true },
+        { name: "OG Wolf Skull", image: "og_wolf_skull.png", owned: false },
+        { name: "OG King Skull", image: "og_king_skull.png", owned: false },
+        { name: "OG Guardian Skull", image: "og_guardian_skull.png", owned: true },
+
+        { name: "OG Almighty Pumpkin", image: "og_almighty_pumpkin.png", owned: false },
+        { name: "OG King Doggy", image: "og_king_doggy.png", owned: false },
       ];
 
       // =====================================================
 
-      const petsContainer = document.getElementById("petsContainer");
+      const petsContainer = document.getElementById("petsContainer"); //get element by bs
       const searchBox = document.getElementById("searchBox");
 
       function renderPets() {
@@ -273,10 +283,11 @@
           petsContainer.appendChild(col);
         });
       }
-
+      // we call, da function
       renderPets();
 
-      // search
+      // searchbar cuz who wants to scroll, idrk how to code this I'm used to writing it simply in react
+      //here's my best go tho
       searchBox.addEventListener("input", () => {
         const term = searchBox.value.toLowerCase();
         document.querySelectorAll(".pet-col").forEach((col) => {
@@ -287,5 +298,6 @@
     </script>
   </body>
 </html>
+
 
 
